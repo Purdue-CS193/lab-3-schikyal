@@ -17,12 +17,16 @@ public class StringUtils {
             Ex: res = "SFlannery"
                     --> res = "SFlanner"
          */
-        res.substring(0, 8);
+        int length = 8;
+        if(res.length() < 8) {
+            length = res.length();
+        }
+        res = res.substring(0, length);
         /* Convert the name to lower-case
             Ex: res = "SFlanner"
                     --> res = "sflanner"
          */
-        res.toLowerCase();
+        res = res.toLowerCase();
         /* return the result of our calculation */
         return res;
     }
